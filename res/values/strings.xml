@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PokerGame</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_game">GameActivity</string>
+    <string name="title_activity_poker_game">PokerGameActivity</string>
+    <string name="providerinfotext">"第{0}次洗牌，剩{1}张牌"</string>
+
+</resources>

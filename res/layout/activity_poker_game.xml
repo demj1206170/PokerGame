@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/game_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.demj.pokergame.PokerGameActivity" >
+
+    <ImageView
+        android:id="@+id/gamer_apple"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/gamer_apple" />
+
+    <ImageView
+        android:id="@+id/gamer_android"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="16dp"
+        android:src="@drawable/gamer_android" />
+
+    <include
+        android:id="@+id/apple_cards"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignLeft="@+id/gamer_apple"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/gamer_apple"
+        layout="@layout/card_list" />
+
+    <include
+        android:id="@+id/android_cards"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/gamer_android"
+        android:layout_below="@+id/gamer_android"
+        layout="@layout/card_list" />
+
+    <include
+        android:id="@+id/apple_score_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/pk"
+        android:layout_alignTop="@+id/apple_cards"
+        layout="@layout/scoredetail" />
+
+    <include
+        android:id="@+id/android_score_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pk"
+        android:layout_below="@+id/gamer_android"
+        layout="@layout/scoredetail" />
+
+    <TextView
+        android:id="@+id/cardproviderinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gamer_apple"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:text="第0次洗牌，剩0张牌" />
+
+    <TextView
+        android:id="@+id/whowin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/apple_score_detail"
+        android:layout_centerHorizontal="true"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/winordrawinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/android_score_detail"
+        android:layout_centerVertical="true"
+        android:text="" />
+
+    <ImageButton
+        android:id="@+id/pk"
+        android:layout_width="96dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="66dp"
+        android:src="@drawable/gamers" />
+
+</RelativeLayout>
